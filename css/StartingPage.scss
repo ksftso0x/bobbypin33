@@ -1,0 +1,125 @@
+$rich: #00171fff;
+$prussian: #003459ff;
+$celadon: #007ea7ff;
+$carolina: #00a8e8ff;
+$font: #ffffffff;
+$purple: #f7d91a;
+$violet: #a68200;
+
+.page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}
+main {
+    width: 100%;
+}
+
+footer {
+    background-color: $prussian;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    p {
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+    }
+    .socials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        .btn {
+            margin-left: 2em;
+            margin-right: 2em;
+            text-decoration: none;
+            text-align: center;
+            color: $carolina;
+            font-weight: bolder;
+            font-size: 1.25em;
+            transition: 0.25s ease;
+            text-shadow: 0px 0px 10px $carolina;
+            .awesome-icon {
+                filter: drop-shadow(0px 0px 10px $carolina);
+                text-decoration: none;
+                text-align: center;
+                color: $carolina;
+                font-weight: bolder;
+                font-size: 1.25em;
+                transition: 0.25s ease;
+            }
+            img {
+                filter: drop-shadow(0px 0px 5px $carolina);
+            }
+        }
+        .btn:hover {
+            transition: 0.15s ease;
+            color: $purple;
+            transform: scale(1.1);
+            text-shadow: 0px 0px 19px $purple;
+            .awesome-icon {
+                filter: drop-shadow(0px 0px 19px $purple);
+                transition: 0.15s ease;
+                color: $purple;
+                transform: scale(1.1);
+            }
+            img {
+                transition: 0.15s ease;
+                filter: hue-rotate(90deg) drop-shadow(0px 0px 10px $purple);
+            }
+        }
+    }
+}
+
+.intro {
+    position: fixed;
+    z-index: 100;
+    background-color: rgb(0, 13, 17);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    pointer-events: none;
+    animation: fadeOut 1s ease 0s 1 normal forwards;
+    img
+    {
+        filter: drop-shadow(0px 0px 5px $carolina);
+        width: 15em;
+    }
+}
+
+@keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    75%
+    {
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}

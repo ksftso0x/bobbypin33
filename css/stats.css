@@ -1,0 +1,39 @@
+.stats-display {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: #004e68;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: -2em;
+  margin-bottom: -2em;
+  z-index: -33;
+}
+
+.stat-block {
+  min-width: 25vw;
+  padding: 2em;
+  text-align: center;
+  font-weight: bolder;
+}
+.stat-block p:first-child {
+  font-family: monospace;
+  font-size: 6em;
+  color: #F7D91A;
+  text-shadow: 0px 0px 19px #F7D91A;
+}
+.stat-block p:last-child {
+  font-family: monospace;
+  font-size: 2em;
+  text-shadow: 0px 0px 19px white;
+}
+
+@media only screen and (max-width: 1224px) {
+  .stats-display {
+    margin-top: 1em;
+  }
+}/*# sourceMappingURL=stats.css.map */

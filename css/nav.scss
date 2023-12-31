@@ -1,0 +1,166 @@
+$rich: #00171fff;
+$prussian: #003459ff;
+$celadon: #007ea7ff;
+$carolina: #00a8e8ff;
+$font: #ffffffff;
+$purple: #f7d91a;
+$violet: #a68200;
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: $rich;
+    z-index: 2;
+    -webkit-box-shadow: 0px 8px 24px 0px rgba(0, 23, 31, 1);
+    -moz-box-shadow: 0px 8px 24px 0px rgba(0, 23, 31, 1);
+    box-shadow: 0px 8px 24px 0px rgba(0, 23, 31, 1);
+    border-radius: 0% 0% 1em 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    .left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        align-content: flex-start;
+    }
+    .right {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: right;
+        align-items: center;
+        align-content: flex-start;
+    }
+    .btn {
+        margin-left: 2em;
+        margin-right: 2em;
+        text-decoration: none;
+        text-align: center;
+        color: $carolina;
+        font-weight: bolder;
+        font-size: 1.25em;
+        transition: 0.25s ease;
+        text-shadow: 0px 0px 10px $carolina;
+        .awesome-icon {
+            filter: drop-shadow(0px 0px 10px $carolina);
+            text-decoration: none;
+            text-align: center;
+            color: $carolina;
+            font-weight: bolder;
+            font-size: 1.25em;
+            transition: 0.25s ease;
+        }
+        img {
+            filter: drop-shadow(0px 0px 5px $carolina);
+        }
+    }
+    .btn:hover {
+        transition: 0.15s ease;
+        color: $purple;
+        transform: scale(1.1);
+        text-shadow: 0px 0px 19px $purple;
+        .awesome-icon {
+            filter: drop-shadow(0px 0px 19px $purple);
+            transition: 0.15s ease;
+            color: $purple;
+            transform: scale(1.1);
+        }
+        img {
+            transition: 0.15s ease;
+            filter: hue-rotate(200deg) drop-shadow(0px 0px 10px $purple);
+        }
+    }
+    button {
+        background-color: rgba(0, 125, 167, 0);
+        border: none;
+        cursor: pointer;
+    }
+    button.wallet-connect {
+        background-color: $carolina;
+        border-color: $celadon;
+        border-style: solid;
+        border-width: 0.15em;
+        color: $purple !important;
+        padding: 0.5em;
+        border-radius: 0.25em;
+        box-shadow: 0px 0px 10px 0px $carolina;
+        cursor: pointer;
+    }
+    button:hover.wallet-connect {
+        color: $carolina !important;
+        background-color: $purple;
+        border-color: $violet;
+        box-shadow: 0px 0px 19px 0px $purple;
+    }
+}
+
+@media only screen and (max-width: 1224px) {
+    nav {
+        flex-direction: column;
+        position: fixed;
+        gap: 0.75em;
+        min-height: 2.5em;
+        padding-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 0.25em;
+        border-style: solid;
+        border-color: $prussian;
+        .menu-items-mobile {
+            animation: rollIn 0.5s ease 0s 1 normal forwards;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            gap: 1.4em;
+            .btn {
+                scale: 1.25;
+            }
+            hr {
+                width: 100%;
+                color: $prussian;
+            }
+        }
+        .menu-items-mobile.hide {
+            animation: rollOut 0.5s ease 0s 1 normal forwards;
+            pointer-events: none;
+        }
+    }
+}
+
+@keyframes rollIn {
+    0%
+    {
+        margin-top: -200%;
+        opacity: 0;
+    }
+    100%
+    {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes rollOut {
+    0%
+    {
+        margin-top: 0%;
+        opacity: 1;
+    }
+    100%
+    {
+        margin-top: -200%;
+        opacity: 0;
+    }
+}
+
